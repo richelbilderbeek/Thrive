@@ -1,6 +1,13 @@
 language: cpp
 compiler: gcc
-before_install: echo 0
-install: echo 0
+
+before_install: 
+  - sudo apt-get install build-essential git cmake ruby subversion
+  - sudo apt-get install libboost-dev libtinyxml-dev libglm-dev ffmpeg
+  - sudo gem install fileutils colorize etc os
+
+install: 
+  - ./SetupThrive.rb
+
 script: echo 0
 
