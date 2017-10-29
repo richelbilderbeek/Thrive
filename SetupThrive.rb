@@ -42,6 +42,9 @@ if BuildPlatform == "linux" and not SkipPackageManager
 
   LinuxOS = getLinuxOS
 
+  info "LinuxOS detected: "
+  info LinuxOS
+
   info "Installing packages"
 
   CommonPackages = "cmake make git mercurial svn"
@@ -58,10 +61,10 @@ if BuildPlatform == "linux" and not SkipPackageManager
 
     PackageManager = "apt-get install -y "
     
-	PackagesToInstall = "bullet-dev boost-dev build-essential automake libtool " +
+	PackagesToInstall = "libbullet-dev libboost-dev build-essential automake libtool " +
                         "libfreetype6-dev libfreeimage-dev libzzip-dev libxrandr-dev " +
                         "libxaw7-dev freeglut3-dev libgl1-mesa-dev libglu1-mesa-dev " +
-                        "libois-dev libboost-thread-dev tinyxml-dev glm-dev ffmpeg-dev " +
+                        "libois-dev libboost-thread-dev libtinyxml-dev libglm-dev ffmpeg " +
                         "libavutil-dev libopenal-dev"
 
   elsif LinuxOS.casecmp("Arch") == 0
