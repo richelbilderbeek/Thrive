@@ -61,7 +61,7 @@ if BuildPlatform == "linux" and not SkipPackageManager
 
     PackageManager = "apt-get install -y "
     
-	PackagesToInstall = "subversion libbullet-dev libboost-dev build-essential automake libtool " +
+	PackagesToInstall = "subversion libbullet-dev libboost-all-dev build-essential automake libtool " +
                         "libfreetype6-dev libfreeimage-dev libzzip-dev libxrandr-dev " +
                         "libxaw7-dev freeglut3-dev libgl1-mesa-dev libglu1-mesa-dev " +
                         "libois-dev libboost-thread-dev libtinyxml-dev libglm-dev libavutil-dev " +
