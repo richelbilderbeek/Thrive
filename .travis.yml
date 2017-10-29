@@ -3,8 +3,9 @@ compiler: gcc
 
 before_install: 
   - sudo apt-get install build-essential git cmake ruby subversion
-  # - sudo apt-get install libboost-dev libtinyxml-dev libglm-dev ffmpeg
-  - sudo gem install fileutils colorize etc os
+  - sudo gem install colorize os
+  # Original
+  # - sudo gem install fileutils colorize etc os
 
 install: 
   - ./SetupThrive.rb
