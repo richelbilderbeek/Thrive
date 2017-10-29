@@ -2,6 +2,7 @@ language: cpp
 compiler: gcc
 
 before_install: 
+  - apt-cache search libavutil
   - sudo apt-get install build-essential git cmake ruby subversion
   - sudo gem install colorize os
   # Original
