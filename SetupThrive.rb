@@ -65,7 +65,7 @@ if BuildPlatform == "linux" and not SkipPackageManager
                         "libfreetype6-dev libfreeimage-dev libzzip-dev libxrandr-dev " +
                         "libxaw7-dev freeglut3-dev libgl1-mesa-dev libglu1-mesa-dev " +
                         "libois-dev libboost-thread-dev libtinyxml-dev libglm-dev " +
-                        "libavutil55 libavutil-dev libavutil-dev libopenal-dev doxygen"
+                        "libavutil-dev libavutil-extra-52 libavutil52 libopenal-dev doxygen"
 
   elsif LinuxOS.casecmp("Arch") == 0
 
