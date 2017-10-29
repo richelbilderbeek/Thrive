@@ -47,13 +47,13 @@ if BuildPlatform == "linux" and not SkipPackageManager
 
   info "Installing packages"
 
-  CommonPackages = "cmake make git mercurial svn"
+  CommonPackages = "cmake make git mercurial"
 
   if LinuxOS.casecmp("Fedora") == 0
 
     PackageManager = "dnf install -y "
     
-    PackagesToInstall = "bullet-devel boost gcc-c++ libXaw-devel freetype-devel " +
+    PackagesToInstall = "svn bullet-devel boost gcc-c++ libXaw-devel freetype-devel " +
                         "freeimage-devel zziplib-devel boost-devel ois-devel tinyxml-devel " +
                         "glm-devel ffmpeg-devel ffmpeg-libs openal-soft-devel libatomic"
 
@@ -61,7 +61,7 @@ if BuildPlatform == "linux" and not SkipPackageManager
 
     PackageManager = "apt-get install -y "
     
-	PackagesToInstall = "libbullet-dev libboost-dev build-essential automake libtool " +
+	PackagesToInstall = "subversion libbullet-dev libboost-dev build-essential automake libtool " +
                         "libfreetype6-dev libfreeimage-dev libzzip-dev libxrandr-dev " +
                         "libxaw7-dev freeglut3-dev libgl1-mesa-dev libglu1-mesa-dev " +
                         "libois-dev libboost-thread-dev libtinyxml-dev libglm-dev libavutil-dev " +
@@ -71,17 +71,17 @@ if BuildPlatform == "linux" and not SkipPackageManager
 
     PackageManager = "pacman -S --noconfirm --color auto --needed"
     
-	PackagesToInstall = "bullet boost automake libtool freetype2 freeimage zziplib " +
+	PackagesToInstall = "svn bullet boost automake libtool freetype2 freeimage zziplib " +
                         "libxrandr libxaw freeglut libgl ois tinyxml glm ffmpeg openal"
     
 	if `pacman -Qs gcc-multilib`
       
-	  PackagesToInstall += " gcc-multilib autoconf automake binutils bison fakeroot file " +
+	  PackagesToInstall += " svn gcc-multilib autoconf automake binutils bison fakeroot file " +
                            "findutils flex gawk gettext grep groff gzip libtool m4 make " +
                            "pacman patch pkg-config sed sudo texinfo util-linux which"
 	else
       
-	  PackagesToInstall += " base-devel"
+	  PackagesToInstall += " svn base-devel"
       
     end
     
